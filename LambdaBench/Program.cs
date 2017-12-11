@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BenchmarkDotNet.Running;
+using BenchmarkDotNet.Attributes.Jobs;
 
 namespace LambdaBench
 {
@@ -10,6 +7,11 @@ namespace LambdaBench
     {
         static void Main(string[] args)
         {
+            
+            //BenchmarkRunner.Run<LambdaVersusInvoke>();
+            BenchmarkRunner.Run<MethodCallBenchs>();
+
+            //new LambdaVersusInvoke().CallViaExpressionWithTwoArguments();
         }
     }
 }
